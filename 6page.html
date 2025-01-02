@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head><script>function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal, {passive: true});
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>.reveal {
+  position: relative;
+  opacity: 0;
+  background-color:transparent;
+}
+
+.reveal.active {
+  opacity: 1;
+   background-color:transparent;
+}
+.active.fade-bottom {
+  animation: fade-bottom 1s ease-in;
+   background-color:transparent;
+   }
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0; 
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1; 
+  }
+}
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:pink;  
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+}
+.two:hover{background-color:red;}
+.dropdown:hover .dropdown-content {display: block;}* {box-sizing: border-box}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+body{
+background-repeat: no-repeat;
+background-size: cover;
+}
+.first h1{
+	font-size:80px;
+	}
+	.first p{
+	font-size:30px;
+	font-family:cursive;
+	}
+        body {
+            text-align: center;
+        }
+        #counter {
+            font-size: 7rem;
+            font-weight: bold;
+            color:red;
+            margin-top: 50px;
+        }
+.scrollcontainer{
+display:flex;
+align-items:center;
+justify-content:center;
+}
+.parallax {
+  /* The image used */
+  background-image: url("infrastructure1.jpg");
+
+  min-height: 500px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container{
+display:flex;
+align-items:center;
+justify-content:center;
+}
+*{
+text-decoration:none;
+}
+.navbar{
+background:purple; font-family:calibri; padding:15px; padding-left:15px;overflow:auto;white-space: nowrap; 
+}
+.navdiv{
+display:flex; align-items:center; justify-content:space-between;
+}
+.hover a {
+    transition: all 500ms;
+}
+.hover a:hover {
+    font-size:30px;
+}
+.logo a{
+font-size:40px; font-weight:600; color:white; padding-right:500px;
+}
+li{
+list-style:none; display:inline-block;
+}
+li a{
+color:white; font-size:18px; font-weight:bold; margin-right:25px;
+}
+img{
+display:block;
+margin-left:auto;
+margin-right:auto;
+max-height:100%;
+max-width:100%;
+}
+.second h1{color:purple; font-weight:30px; background-color:white; padding:30px; padding-left:20px;}
+h2{color:red; background-color:pink; padding:30px;font-family:cursive;margin-left:400px;margin-right:400px;}
+.p1 p{color:blue; backgroung-color:red; padding:50px; font-size:30px;font-family:cursive;}
+.p2 p{color:green; backgroung-color:pink; padding:50px;font-size:30px;font-family:cursive;}
+.first button{color:purple; background-color:pink; padding:30px;font-family:cursive; transition: all 500ms;}
+.first button:hover {
+    font-size:30px;
+	background-color:red;
+}
+</style>
+</head>
+<body background="bg3.jpg" leftmargin="150">
+<nav class="navbar">
+<div class="navdiv">
+<div class="logo"><a href="#">SVEC</a></div>
+<div class="hover"><ul>
+<li><a href="main page.html">Home</a></li>
+<li><a href="https://sves.org.in/ecap/">attendance</a></li>
+<li><div class="dropdown"><a href="#">notes</a><div class="dropdown-content">
+   <div class="two"><a href="#">ece</a></div>
+   <div class="two"><a href="#">eee</a></div>
+	<div class="two"><a href="#">mech</a></div><div class="two"><a href="#">cme</a></div>
+	</div>
+</div></li>
+<li><a href="contact.html">contact</a>
+<li><button style="background-color:orange;"><a href="diploma.html">polytechnic</a></button></li
+</ul></div>
+</div>
+</nav>
+<div class="container">
+<img
+src="Sri_Vasavi_College_Logo.jpg"
+alt="college logo"
+height="135"
+style="width:25%;">
+<div class="second"><center><h1>SRI VASAVI ENGINEERING AND POLYTECHNIC COLLEGE</h1></center></div>
+</div>
+<div>
+<div class="scrollcontainer"><marquee behavior="slide" direction="left" scrollamount="20">
+<img src="acheivment2.jpg" width="500" height="250" alt="college acheivement">
+</marquee></div>
+<img src="acheivment3.jpg" width="400" height="200" alt="college acheivement">
+<div class="scrollcontainer"><marquee behavior="slide" direction="left" scrollamount="20">
+<img src="acheivment4.jpg" width="500" height="250" alt="college acheivement">
+</marquee></div>
+</div><div class="container reveal fade-bottom">
+<div class="p1">
+<p>Sri vasavi engineering college considered one of the best engineering colleges in andra pradesh,started its journey in 2001.since its inception ,the college has been striving to provide quality techical education to its students and making them industry ready .sri vasavi engineering college exemplifies quality in various fields ranging from engineering,pharmacy to business administrative courses and is rated as one among the top ten engineering colleges in andhra pradesh.highly qualified staff always contributes to the knowledge levels of students and facilitates their placements in top most MNC'c every year.NBA and NAAC acreditations bear testimony to top most facilities available in the campus .SVEC became an autonomous engineering colege in 2018 and is fine tuning its course curriculam  to suit the ever going industry needs.their vision is to be a premier technological institute striving for excellence with global perspective and commitment to the nation .</p></div></div><div class="container reveal fade-bottom">
+<div class="first"><ul>
+<li><button><a href="ece.html">ECE</a></button></li>
+<li><button><a href="eee.html">EEE</a></button></li>
+<li><button><a href="cse.html">CSE</a></button></li>
+<li><button><a href="mechanical.html">Mechanical</a></button></li>
+</ul>
+</div></div><div class="container reveal fade-bottom">
+ <center><div class="first"> <h1>more than</h1></div></center></div>
+   <div class="container reveal fade-bottom"> <div id="counter">0</div>
+
+    <script>
+        let upto = 0;
+        let counts = setInterval(updated, 10);
+
+        function updated() {
+            let count = document.getElementById("counter");
+            count.innerHTML = ++upto;
+            if (upto === 700) {
+                clearInterval(counts);
+            }
+        }
+    </script></div><div class="container reveal fade-bottom"><div class="first ;container reveal fade-bottom"><p>students are selected for the high paid jobs per annum in sri vasavi engineering college</p></div></div>
+<img
+src="infrastructure1.jpg"
+alt="college logo"
+height="200"
+width="150"
+style="width:50%;">
+<div>
+<h2>WHY POLYTECHNIC?</h2></div>
+<div class="container reveal fade-bottom"><center><div class="p2">
+<p>A polytechnic diploma is a bold educationalchoice as it is a widely recognised qualification and can pave the way for higher studies as well as a career in engineering , depending on your perfomance this qualification can be obtained within three years and offers immense practical exposure to candidates ,enhancing their skills,which helps them gain desirable jobs in the industry.a number of government and private institutipns are currently accepting polytechnic admissions so you can enrol for the diploma program that best suits your career goals..</p></div></div>
+<h1 style="font-size:50px" >upcoming events</h1>
+<marquee style="color:red;font-size:40px">upcoming events at svec are 1 week python and IOT programs to 4 th semester students</marquee>
+ <div class="parallax"></div>
+<div style="height:350px;font-size:30px; font-family:cursive;">
+<div class="container reveal fade-bottom"><p> sri vasavi engineering college is one of the best engineering college among the whole andhra pradesh.their mission is to produce engineering graduates of professional quality and global perspective through learner centric education and also to establish linkages with government,industry and research laboratories to promoteR&D activities and to disseminate innovations .and also to create an eco system in the institutethat leads to holistic developement and ability for life-long learning.</p></div>
+</div><div style="height:150px;font-size:30px; font-family:cursive;"><h1>image gallery</h1></div><div class="slideshow-container">
+<div class="mySlides fade" style="height:650px">
+  <div class="numbertext">1 / 16</div>
+  <img src="infrastructure1.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade"style="height:650px">
+  <div class="numbertext">2 / 16</div>
+  <img src="infrastructure3.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade"style="height:650px">
+  <div class="numbertext">3 / 16</div>
+  <img src="acheivment3.jpg" style="width:100%">
+</div>
+<div class="mySlides fade"style="height:650px">
+  <div class="numbertext">4 / 16</div>
+  <img src="board of governors.jpg" style="width:100%">
+</div><div class="mySlides fade"style="height:650px">
+  <div class="numbertext">5 / 16</div>
+  <img src="acheivment1.jpg" style="width:100%">
+</div><div class="mySlides fade"style="height:650px">
+  <div class="numbertext">6 / 16</div>
+  <img src="ece lab.jpg" style="width:100%">
+</div><div class="mySlides fade"style="height:650px">
+  <div class="numbertext">7 / 16</div>
+  <img src="eee.jpg" style="width:100%">
+</div><div class="mySlides fade"style="height:650px">
+  <div class="numbertext">8 / 16</div>
+  <img src="mechanical.jpg" style="width:100%">
+</div><div class="mySlides fade"style="height:650px">
+  <div class="numbertext">9 / 16</div>
+  <img src="gallery1.jpg" style="width:100%">
+</div><div class="mySlides fade"style="height:650px">
+  <div class="numbertext">10 / 16</div>
+  <img src="gallery2.jpg" style="width:100%">
+</div><div class="mySlides fade"style="height:650px">
+  <div class="numbertext">11 / 16</div>
+  <img src="gallery3.jpg" style="width:100%">
+</div><div class="mySlides fade"style="height:650px">
+  <div class="numbertext">12 / 16</div>
+  <img src="gallery4.jpg" style="width:100%">
+</div><div class="mySlides fade"style="height:650px">
+  <div class="numbertext">13 / 16</div>
+  <img src="gallery5.jpg" style="width:100%">
+</div><div class="mySlides fade"style="height:650px">
+  <div class="numbertext">14 / 16</div>
+  <img src="acheivment4.jpg" style="width:100%">
+</div><div class="mySlides fade"style="height:650px">
+  <div class="numbertext">15 / 16</div>
+  <img src="mylib1.jpg" style="width:100%">
+</div><div class="mySlides fade"style="height:650px">
+  <div class="numbertext">16 / 16</div>
+  <img src="Sri_Vasavi_College_Logo.jpg" style="width:100%">
+</div>
+<a class="prev" onclick="plusSlides(-1)">❮</a>                                        
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> <span class="dot" onclick="currentSlide(5)"></span> <span class="dot" onclick="currentSlide(6)"></span> <span class="dot" onclick="currentSlide(7)"></span> <span class="dot" onclick="currentSlide(8)"></span> <span class="dot" onclick="currentSlide(9)"></span> <span class="dot" onclick="currentSlide(10)"></span> <span class="dot" onclick="currentSlide(11)"></span> <span class="dot" onclick="currentSlide(12)"></span> <span class="dot" onclick="currentSlide(13)"></span> <span class="dot" onclick="currentSlide(14)"></span> <span class="dot" onclick="currentSlide(15)"></span> <span class="dot" onclick="currentSlide(16)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script></div>
+
+ <a href="https://x.com/svectpg"><i class="fa-brands fa-square-twitter"></i></a>
+ <a href="https://www.facebook.com/100067829822379/"><i class="fa-brands fa-facebook"></i></a>
+ <i class="fa-brands fa-whatsapp"></i>
+ <i class="fa-brands fa-instagram"></i></center>
+  </body>
+  </html>
